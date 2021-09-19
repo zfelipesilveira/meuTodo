@@ -5,6 +5,6 @@
 </form> 
 {% for todo in tasks %}
 <p>{{todo.task}}</p>
-<a href= ""><button>Update</button></a>
+<a href= "{% url 'updateItem' todo.id %}"><button>Update</button></a>
 <a href= "{% url 'deleteItem' todo.id %}"><button>Delete</button></a>
 {% endfor %}
