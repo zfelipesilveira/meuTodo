@@ -1,0 +1,10 @@
+<form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <button type = 'submit'>Submit</button>
+</form> 
+{% for todo in tasks %}
+<p>{{todo.task}}</p>
+<a href= ""><button>Update</button></a>
+<a href= "{% url 'deleteItem' todo.id %}"><button>Delete</button></a>
+{% endfor %}
